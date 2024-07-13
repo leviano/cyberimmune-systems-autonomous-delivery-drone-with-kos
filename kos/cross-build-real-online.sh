@@ -10,8 +10,8 @@ export SDK_PREFIX="/opt/KasperskyOS-Local-Edition"
 export INSTALL_PREFIX="$BUILD/../install"
 export PATH="$SDK_PREFIX/toolchain/bin:$PATH"
 
-export BUILD_WITH_CLANG=
-export BUILD_WITH_GCC=
+export BUILD_WITH_CLANG=""
+export BUILD_WITH_GCC="y"
 
 set -eu
 
@@ -67,7 +67,7 @@ fi
 "$SDK_PREFIX/toolchain/bin/cmake" -G "Unix Makefiles" -B "$BUILD" \
       -D SIMULATION="FALSE" \
       -D SERVER="TRUE" \
-      -D BOARD_ID="1" \
+      -D BOARD_ID="7" \
       -D SERVER_IP="192.168.1.78" \
       -D CMAKE_BUILD_TYPE:STRING=Debug \
       -D CMAKE_INSTALL_PREFIX:STRING="$INSTALL_PREFIX" \

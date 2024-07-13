@@ -15,7 +15,7 @@ export BUILD_WITH_GCC=
 
 SIMULATOR_IP="${1:-"10.0.2.2"}"
 SERVER_IP="${2:-"10.0.2.2"}"
-BOARD_ID="${3:-"2"}"
+BOARD_ID="7"
 
 set -eu
 

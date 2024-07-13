@@ -5,10 +5,10 @@ docker: docker-image
 docker-image: docker-image-simulator docker-image-orvd
 
 docker-image-simulator:
-	docker build ./ -t simulator
+	docker build ./ -t simulator --rm
 
 docker-image-orvd:
-	docker build -f orvd.Dockerfile -t orvd ./
+	docker build --rm -f orvd.Dockerfile -t orvd ./
 
 clean-docker-compose:
 	docker-compose -f docker-compose-offline.yml down

@@ -40,7 +40,7 @@ elif [ -n "$DISPLAY" -a -n "$(which xterm)" ]; then
 elif [ -n "$DISPLAY" -a -n "$(which konsole)" ]; then
   konsole --hold -e $*
 elif [ -n "$DISPLAY" -a -n "$(which gnome-terminal)" ]; then
-  gnome-terminal -e "$*"
+  gnome-terminal -- "$*"
 elif [ -n "$STY" ]; then
   # We are running inside of screen, try to start it there
   screen -X screen -t "$name" $*
